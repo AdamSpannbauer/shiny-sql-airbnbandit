@@ -170,7 +170,7 @@ sqlEmulatorServer <- function(id) {
         if (shiny::isTruthy(query_text)) {
           sqldf::sqldf(query_text, envir = globalenv(), method = "raw")
         }
-      }, ignoreInit = FALSE, ignoreNULL = FALSE)
+      })
 
       output$query_results_dt <- DT::renderDataTable(
         {
@@ -181,7 +181,7 @@ sqlEmulatorServer <- function(id) {
       )
 
       output$query_results_ui <- shiny::renderUI({
-        # shiny::req(query_result())
+        shiny::req(query_result())
         shiny::wellPanel(
           DT::dataTableOutput(shiny::NS(id, "query_results_dt"))
         )

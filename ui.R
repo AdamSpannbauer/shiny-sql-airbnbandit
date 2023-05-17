@@ -180,8 +180,8 @@ ui <- dashboardPage(
         ),
         fluidRow(
           column(
-            width = 4,
-            offset = 4,
+            width = 6,
+            offset = 3,
             br(),
             wellPanel(
               fluidRow(
@@ -202,9 +202,11 @@ ui <- dashboardPage(
                 column(
                   width = 12,
                   align = "right",
-                  submitButton(
-                    text = "Login",
-                    icon = icon("sign-in")
+                  actionButton(
+                    inputId = "login_button",
+                    label = "Login",
+                    icon = icon("sign-in"),
+                    class = "btn-secondary"
                   )
                 )
               )

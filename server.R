@@ -9,21 +9,23 @@ server <- function(input, output) {
   sqlEmulatorServer(id = "clue5_sql_editor")
   sqlEmulatorServer(id = "clue6_sql_editor")
 
-  output$response_img <- renderUI({
+  login_response_gif <- eventReactive(input$login_button, {
     req(input$username, input$password)
 
     if (toupper(input$username) == USERNAME & input$password == PASSWORD) {
-      tags$img(
-        src = "https://i.giphy.com/media/XreQmk7ETCak0/giphy.gif",
-        width = "80%",
-        style = "border-radius:10px"
-      )
+      "https://i.giphy.com/media/XreQmk7ETCak0/giphy.gif"
     } else {
-      tags$img(
-        src = "https://i.giphy.com/media/U4GRHZsWogniDwt4Ui/giphy.gif",
-        width = "100%",
-        style = "border-radius:20px"
-      )
+      "https://i.giphy.com/media/U4GRHZsWogniDwt4Ui/giphy.gif"
     }
+  })
+
+  output$response_img <- renderUI({
+    req(login_response_gif())
+
+    tags$img(
+      src = login_response_gif(),
+      width = "80%",
+      style = "border-radius:10px"
+    )
   })
 }
