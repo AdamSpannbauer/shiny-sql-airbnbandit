@@ -42,9 +42,11 @@ trunc_char_vec <- function(x, max_chars = 50, trailing_text = "...") {
 #' @param trailing_text The text to append when an element is truncated.
 #' @return A data frame with truncated character columns.
 #' @examples
-#' my_df <- data.frame(name = c("John Doe", "Jane Smith"),
-#'                     age = c(30, 25),
-#'                     comment = c("This is a long comment.", "Another comment."))
+#' my_df <- data.frame(
+#'   name = c("John Doe", "Jane Smith"),
+#'   age = c(30, 25),
+#'   comment = c("This is a long comment.", "Another comment.")
+#' )
 #' trunc_df_char_cols(my_df, 3)
 #' # Output:
 #' #     name age comment
@@ -90,18 +92,16 @@ sqlEmulatorUI <- function(id,
                           label = "Write your query here",
                           placeholder = "SELECT clue FROM evidence;",
                           height = "200px",
-                          icon = "database",
+                          button_icon = "database",
                           button_class = "info") {
-  ns <- shiny::NS(id)
-
   shiny::div(
     shiny::fluidRow(
       shiny::column(
-        width = 6,
-        offset = 3,
-        shiny::h4(label),
+        width = 8,
+        offset = 2,
+        shiny::h3(label),
         shinyAce::aceEditor(
-          ns("code"),
+          shiny::NS(id, "code"),
           mode = "sql",
           theme = "chrome",
           height = height,
@@ -112,23 +112,23 @@ sqlEmulatorUI <- function(id,
     ),
     shiny::fluidRow(
       shiny::column(
-        width = 6,
-        offset = 3,
+        width = 8,
+        offset = 2,
         align = "right",
         shiny::downloadButton(
-          ns("download_data"),
-          "Download results",
+          outputId = shiny::NS(id, "download_data"),
+          label = "Download results",
           icon = shiny::icon(
-            "download",
+            name = "download",
             class = "fa-pull-right",
             style = "font-size: 1.3em"
           )
         ),
         shiny::actionButton(
-          ns("run_query_button"),
+          inputId = shiny::NS(id, "run_query_button"),
           label = "Run query",
           icon = shiny::icon(
-            "user-secret",
+            name = button_icon,
             class = "fa-pull-right",
             style = "font-size: 1.3em"
           ),
@@ -141,7 +141,7 @@ sqlEmulatorUI <- function(id,
         width = 8,
         offset = 2,
         shiny::br(),
-        shiny::uiOutput(ns("query_results_ui"))
+        shiny::uiOutput(shiny::NS(id, "query_results_ui"))
       )
     )
   )
@@ -170,7 +170,7 @@ sqlEmulatorServer <- function(id) {
         if (shiny::isTruthy(query_text)) {
           sqldf::sqldf(query_text, envir = globalenv(), method = "raw")
         }
-      })
+      }, ignoreInit = FALSE, ignoreNULL = FALSE)
 
       output$query_results_dt <- DT::renderDataTable(
         {
@@ -181,9 +181,9 @@ sqlEmulatorServer <- function(id) {
       )
 
       output$query_results_ui <- shiny::renderUI({
-        shiny::req(query_result())
+        # shiny::req(query_result())
         shiny::wellPanel(
-          DT::dataTableOutput(NS(id, "query_results_dt"))
+          DT::dataTableOutput(shiny::NS(id, "query_results_dt"))
         )
       })
 
@@ -192,7 +192,7 @@ sqlEmulatorServer <- function(id) {
           "query_results.csv"
         },
         content = function(file) {
-          req(query_result())
+          shiny::req(query_result())
           write.csv(query_result(), file, row.names = FALSE)
         }
       )
