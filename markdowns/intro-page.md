@@ -31,6 +31,6 @@ Each clue will lead you to a **listing ID AND a letter**.  This information will
   * If I was the bandit and the clues gave you the letters: `"R", "B", "A", "N", "S", "A", "E", "U", "N", "P"` then the username would be `SPANNBAUER` (thankfully the bandit has a more common and shorter last name).
 * Password: all of the listing ids in order of the clue they came from
   * If you find out the 6 listing ids are `[1, 2, 3, 4, 5, 6]` then the password would be `123456`
-  * Note that the ids are more than one digit so the password will be lengthy and example of one id might be: `2615869`.  All of the ids in the password are 7 or 8 digits long.
+  * Note that the ids are more than one digit so the password will be lengthy; an example of one id might be: `2615869`.  All of the ids in the password are 7 or 8 digits long.
 
 Once you have the Username and Password try it out on the login page!!

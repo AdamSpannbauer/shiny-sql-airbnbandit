@@ -70,7 +70,55 @@ ui <- dashboardPage(
       tags$link(
         rel = "shortcut icon",
         href = "favicon.ico"
-      )
+      ),
+      tags$meta(
+        name = "title",
+        content = "SQL AirbnBandit!"
+      ),
+      tags$meta(
+        name = "description",
+        content = "Hunt down the AirbnBandit armed with a SQL database, a series of clues, and your own ingenuity!"
+      ),
+      tags$meta(
+        property = "og:type",
+        content = "website"
+      ),
+      tags$meta(
+        property = "og:url",
+        content = "https://spannbaueradam.shinyapps.io/sql-airbnbandit/"
+      ),
+      tags$meta(
+        property = "og:title",
+        content = "SQL AirbnBandit!"
+      ),
+      tags$meta(
+        property = "og:description",
+        content = "Hunt down the AirbnBandit armed with a SQL database, a series of clues, and you're own ingenuity!"
+      ),
+      tags$meta(
+        property = "og:image",
+        content = "social-preview.png"
+      ),
+      tags$meta(
+        property = "twitter:card",
+        content = "summary_large_image"
+      ),
+      tags$meta(
+        property = "twitter:url",
+        content = "https://spannbaueradam.shinyapps.io/sql-airbnbandit/"
+      ),
+      tags$meta(
+        property = "twitter:title",
+        content = "SQL AirbnBandit!"
+      ),
+      tags$meta(
+        property = "twitter:description",
+        content = "Hunt down the AirbnBandit armed with a SQL database, a series of clues, and your own ingenuity!"
+      ),
+      tags$meta(
+        property = "twitter:image",
+        content = "social-preview.png"
+      ),
     ),
     tabItems(
       tabItem(
