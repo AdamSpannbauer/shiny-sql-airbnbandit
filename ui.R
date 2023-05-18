@@ -2,7 +2,7 @@ library(shiny)
 library(shinydashboard)
 
 ui <- dashboardPage(
-  skin = "red",
+  skin = "black",
   title = "SQL AirbnBandit!",
   dashboardHeader(
     title = "SQL AirbnBandit"

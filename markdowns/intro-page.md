@@ -1,14 +1,20 @@
+<p align="right">
+  <img src="../www/md_imgs/hoodie-hacker-laptop.png" width="35%" style = "border-radius:10px" align="right">
+</p>
+
 ## AirbnBandit SQL hunt
 
-```
+<div style="width:60%;">
+<pre>
+
 WANTED: AirbnBandit
 
 For crimes against the city of Asheville.
 
-The suspect should be assumed to be dangerous and armed with
-
-the knowledge of Bayesian statistics.
-```
+The suspect should be assumed to be dangerous and
+armed with the knowledge of Bayesian statistics.
+</pre>
+</div>
 
 ### Background
 

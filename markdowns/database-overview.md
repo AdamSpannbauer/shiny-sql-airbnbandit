@@ -1,6 +1,16 @@
+## Data source
+
+Available tables hold information about Airbnb listings in Asheville, North Carolina.
+
+Downloaded from http://insideairbnb.com/get-the-data/ (files downloaded: `calendar.csv.gz`, `reviews.csv.gz`, & `listings.csv.gz`)
+
+Data extract created 2023-03-19.
+
 ## Table relationships
 
-<img src="../www/database-diagram.jpg" width="85%" style = "border-radius:10px">
+<p align="center">
+  <img src="../www/md_imgs/database-diagram.jpg" width="85%" style = "border-radius:10px">
+</p>
 
 ## Table names and columns
 

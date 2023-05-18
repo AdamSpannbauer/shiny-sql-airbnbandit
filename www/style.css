@@ -1,3 +1,36 @@
 hr {
   border-top: 1px solid #717171;
 }
+
+img {
+  margin: 20px !important;
+}
+
+.btn-info {
+  background-color: #0a344e !important;
+  color: #fff !important;
+  border: 1px #2a546e !important;
+}
+
+.btn-info:hover {
+  background-color: #2a546e !important;
+  color: #fff !important;
+  border: 1px #2a546e !important;
+}
+
+.skin-black .main-header .logo {
+  background-color: #0a344e !important;
+  color: #fff !important;
+  border-right: 1px solid #194d5d !important;
+}
+
+.skin-black .main-header .navbar {
+  background-color: #0a344e !important;
+  color: #fff !important;
+}
+
+.skin-black .main-header .navbar .sidebar-toggle {
+  background-color: #0a344e !important;
+  color: #fff !important;
+  border-right: 1px solid #194d5d !important;
+}
