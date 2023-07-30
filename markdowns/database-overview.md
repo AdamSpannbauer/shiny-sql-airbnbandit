@@ -18,7 +18,7 @@ Data extract created 2023-03-19.
 
 * listing_id
 
-* date
+* cal_date
 
 * available
 
@@ -36,7 +36,7 @@ Data extract created 2023-03-19.
 
 * id
 
-* date
+* review_date
 
 * reviewer_id
 
