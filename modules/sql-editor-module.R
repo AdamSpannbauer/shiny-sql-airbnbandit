@@ -168,7 +168,7 @@ sqlEmulatorServer <- function(id) {
         shiny::isolate(query_text <- input$code)
 
         if (shiny::isTruthy(query_text)) {
-          sqldf::sqldf(query_text, envir = globalenv(), method = "raw")
+          sqldf::sqldf(query_text, envir = globalenv())
         }
       })
 
