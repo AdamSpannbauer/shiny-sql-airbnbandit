@@ -91,6 +91,7 @@ trunc_df_char_cols <- function(my_df, max_chars = 50, trailing_text = "...") {
 sqlEmulatorUI <- function(id,
                           label = "Write your query here",
                           placeholder = "SELECT clue FROM evidence;",
+                          correct_answer = "X",
                           height = "200px",
                           button_icon = "database",
                           button_class = "info") {
@@ -142,6 +143,28 @@ sqlEmulatorUI <- function(id,
         offset = 2,
         shiny::br(),
         shiny::uiOutput(shiny::NS(id, "query_results_ui"))
+      )
+    ),
+    shiny::fluidRow(
+      shiny::column(
+        width = 8,
+        offset = 2,
+        shiny::textInput(
+          shiny::NS(id, "answer_check_input"),
+          label = "Check your letter(s):",
+          placeholder = "X"
+        )
+      )
+    ),
+    shiny::fluidRow(
+      shiny::column(
+        width = 8,
+        offset = 2,
+        shiny::conditionalPanel(
+          condition = paste0("input.answer_check_input.trim().toUpperCase().split('').sort().join('') == '", correct_answer, "'"),
+          ns = shiny::NS(id),
+          HTML('<p style="color: green; font-weight: bold;">Correct!!</p>')
+        )
       )
     )
   )

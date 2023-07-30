@@ -160,7 +160,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-1.md")
           )
         ),
-        sqlEmulatorUI(id = "clue1_sql_editor")
+        sqlEmulatorUI(id = "clue1_sql_editor", correct_answer = "T")
       ),
       tabItem(
         tabName = "tabclue2",
@@ -171,7 +171,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-2.md")
           )
         ),
-        sqlEmulatorUI(id = "clue2_sql_editor")
+        sqlEmulatorUI(id = "clue2_sql_editor", correct_answer = "V")
       ),
       tabItem(
         tabName = "tabclue3",
@@ -182,7 +182,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-3.md")
           )
         ),
-        sqlEmulatorUI(id = "clue3_sql_editor")
+        sqlEmulatorUI(id = "clue3_sql_editor", correct_answer = "E")
       ),
       tabItem(
         tabName = "tabclue4",
@@ -193,7 +193,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-4.md")
           )
         ),
-        sqlEmulatorUI(id = "clue4_sql_editor")
+        sqlEmulatorUI(id = "clue4_sql_editor", correct_answer = "EN")
       ),
       tabItem(
         tabName = "tabclue5",
@@ -204,7 +204,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-5.md")
           )
         ),
-        sqlEmulatorUI(id = "clue5_sql_editor")
+        sqlEmulatorUI(id = "clue5_sql_editor", correct_answer = "S")
       ),
       tabItem(
         tabName = "tabclue6",
@@ -215,7 +215,7 @@ ui <- dashboardPage(
             includeMarkdown("markdowns/clue-6.md")
           )
         ),
-        sqlEmulatorUI(id = "clue6_sql_editor")
+        sqlEmulatorUI(id = "clue6_sql_editor", correct_answer = "S")
       ),
       tabItem(
         tabName = "login",
