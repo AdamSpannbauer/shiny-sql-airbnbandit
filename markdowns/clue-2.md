@@ -8,7 +8,7 @@
 
 The AirbnBandit was reported by our most loyal host (they've been with us the longest `<3`\*).  The report was at their oldest listing\*\*.
 
-Find the `name` of the listing described above.  Write down the first character of the `name` as a clue.
+Find the `name` of the listing described above.  Write down the first *character* of the `name` as a clue (spaces and symbols count as characters).
 
 Use the `listings` table.
 

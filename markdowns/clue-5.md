@@ -8,7 +8,7 @@
 
 We have intel that our perp stayed in a great spot for New Years Eve 2020 and couldn't help but leave a review. We also received a tip that they went by the false name "Amy" when leaving this review.
 
-Find the above described review in the `reviews` table, and then find the first character of the `name` of the associated listing as a clue.
+Find the above described review in the `reviews` table, and then find the first *character* of the `name` of the associated listing as a clue (spaces and symbols count as characters).
 
 Use the `listings` and `reviews` tables.
 

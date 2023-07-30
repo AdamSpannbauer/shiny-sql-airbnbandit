@@ -10,7 +10,7 @@
 
 The bandit was first reported at our oldest* listing in Asheville.
 
-Find the `name` of this oldest listing.  Write down the sixth character of the `name` as a clue.
+Find the `name` of this oldest listing.  Write down the sixth *character* of the `name` as a clue (spaces and symbols count as characters).
 
 Use the `listings` table.
 

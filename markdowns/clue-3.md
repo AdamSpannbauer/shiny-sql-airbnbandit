@@ -8,7 +8,7 @@
 
 Our perp was sighted in zip code `28805`* and was rumored to be connected to a host named `Kelsey`.
 
-Find a listing matching this description and take the third character of its `name` as a clue.
+Find a listing matching this description and take the third *character* of its `name` as a clue (spaces and symbols count as characters).
 
 Use the `listings` table.
 
