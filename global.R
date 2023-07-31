@@ -8,6 +8,10 @@ calendar <- fread("data/calendar-asheville-20230319.csv.gz")
 listings <- fread("data/listings-asheville-20230319.csv.gz")
 reviews <- fread("data/reviews-asheville-20230319.csv.gz")
 
+set.seed(42)
+calendar <- calendar[sample(.N, 100000), ]
+reviews <- reviews[c(sample(.N, 100000 - 1), 130379), ]
+
 # Remove row that messes up a clue answer... bad planning idk...
 listings = listings[as.character(id) != "841304513878963200", ]
 
