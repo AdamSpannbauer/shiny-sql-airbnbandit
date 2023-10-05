@@ -13,9 +13,9 @@ server <- function(input, output) {
     req(input$username, input$password)
 
     if (toupper(input$username) == USERNAME & input$password == PASSWORD) {
-      "https://i.giphy.com/media/XreQmk7ETCak0/giphy.gif"
+      SUCCESS_GIF
     } else {
-      "https://i.giphy.com/media/U4GRHZsWogniDwt4Ui/giphy.gif"
+      sample(FAIL_GIFS, size = 1)
     }
   })
 
