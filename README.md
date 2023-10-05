@@ -18,13 +18,13 @@ armed with the knowledge of Bayesian statistics.
 </pre>
 </div>
 
-## Background
+## The background
 
 A crime was committed in Asheville, NC.  The cyber criminal was a major user of Airbnb to avoid staying in one spot or using the same IP address for too long.
 
 Your job is to scour for clues in a database holding all of the Airbnb listings in Asheville.  Some of our other detectives' intel will help guide your investigation.
 
-## Where you come in
+## The task
 
 Each clue will lead you to a **listing ID AND a letter**.  This information will allow you to log on to the AirbnBandit's computer to help us gather the last pieces of evidence we need to make the charges stick.
 
@@ -36,6 +36,10 @@ Each clue will lead you to a **listing ID AND a letter**.  This information will
   * Note that the ids are more than one digit so the password will be lengthy; an example of one id might be: `2615869`.  All of the ids in the password are 7 or 8 digits long.
 
 Once you have the Username and Password try it out on the login page!!
+
+## The answer key
+
+No peeking until you've tried! - [`answer_key_queries.sql`](answer_key_queries.sql)
 
 ## The app
 
@@ -55,8 +59,6 @@ Once you've discovered the username and password test them on the login page.  Y
 <p align="center">
  <img src="./readme/example-login-page.png" width="70%" style = "border-radius:10px" align="center">
 </p>
-
-
 
 <p align="right">
   <img src="./www/md_imgs/database-laptop.png" width="35%" style = "border-radius:10px" align="right">
