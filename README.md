@@ -5,10 +5,10 @@
 
 # AirbnBandit SQL hunt
 
+These are just the docs! Find the app here: [https://spannbaueradam.shinyapps.io/sql-airbnbandit/](https://spannbaueradam.shinyapps.io/sql-airbnbandit/)
+
 <div style="width:60%;">
 <pre>
-
-
 WANTED: AirbnBandit
 
 For crimes against the city of Asheville.
