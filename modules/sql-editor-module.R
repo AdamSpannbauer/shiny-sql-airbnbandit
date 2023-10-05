@@ -164,6 +164,11 @@ sqlEmulatorUI <- function(id,
           condition = paste0("input.answer_check_input.trim().toUpperCase().split('').sort().join('') == '", correct_answer, "'"),
           ns = shiny::NS(id),
           HTML('<p style="color: green; font-weight: bold;">Correct!!</p>')
+        ),
+        shiny::conditionalPanel(
+          condition = paste0("input.answer_check_input.trim().toUpperCase().split('').sort().join('') != '", correct_answer, "'"),
+          ns = shiny::NS(id),
+          HTML('<p style="color: #b22222; font-weight: bold;">nope...</p>')
         )
       )
     )
