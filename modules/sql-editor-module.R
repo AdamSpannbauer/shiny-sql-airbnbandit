@@ -72,6 +72,22 @@ trunc_df_char_cols <- function(my_df, max_chars = 50, trailing_text = "...") {
 
 # SQL editor and output module -------------------------------------------------
 
+EDITOR_TEXT_LINES <- c(
+  "-- Write your query here and click 'Run query' button",
+  "SELECT *",
+  "FROM listings",
+  "LIMIT 10;",
+  "",
+  "",
+  "",
+  "",
+  "-- Type your letter(s) below to check if you're right!",
+  "-- Just type the letter(s) only, no additional characters,",
+  "-- symbols, spaces, etc."
+)
+
+EDITOR_TEXT <- paste(EDITOR_TEXT_LINES, collapse="\n")
+
 #' SQL Emulator User Interface
 #'
 #' This function creates a user interface (UI) module for a SQL emulator. It
@@ -103,6 +119,7 @@ sqlEmulatorUI <- function(id,
         shiny::h3(label),
         shinyAce::aceEditor(
           shiny::NS(id, "code"),
+          value = EDITOR_TEXT,
           mode = "sql",
           theme = "chrome",
           height = height,
