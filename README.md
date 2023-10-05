@@ -43,7 +43,7 @@ Once you have the Username and Password try it out on the login page!!
 
 Read the clue carefully, craft your query, and check a piece of your answer.
 
-<p align="right">
+<p align="center">
  <img src="./readme/example-clue-page.png" width="70%" style = "border-radius:10px" align="center">
 </p>
 
@@ -52,7 +52,7 @@ Read the clue carefully, craft your query, and check a piece of your answer.
 
 Once you've discovered the username and password test them on the login page.  You'll get a response via gif if you've been successful.
 
-<p align="right">
+<p align="center">
  <img src="./readme/example-login-page.png" width="70%" style = "border-radius:10px" align="center">
 </p>
 
